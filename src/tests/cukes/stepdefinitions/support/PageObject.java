@@ -1,4 +1,4 @@
-package cukes.stepdefinitions;
+package cukes.stepdefinitions.support;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,14 +7,22 @@ import org.openqa.selenium.WebDriver;
 public class PageObject {
     private WebDriver driver;
 
+
     public PageObject(WebDriver driver) {
         this.driver = driver;
+    }
+
+    public void navigateTo(String pageUrl){
+        this.driver.navigate().to(pageUrl);
     }
 
     public void clickElementWithText(String text){
         this.driver.findElement(By.name(text)).click();
     }
-    public void typeIntoTextFieldWithLabel(String label, String text){;
+    public void clickFirstElementWithText(String text){
+        this.driver.findElements(By.name(text)).get(0).click();
+    }
+    public void typeIntoTextFieldWithLabel(String label, String text){
         this.driver.findElement(By.name(label)).sendKeys(text);
     }
     public boolean containsText(String text) {
