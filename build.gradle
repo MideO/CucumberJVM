@@ -58,7 +58,7 @@ task cleanFunctionalTestRunners(type: Delete) {
 
 ext.tag = project.hasProperty("TAG") ? "${TAG}" : ""
 task functionalTestCreator << {
-    def features = fileTree('src/tests/cukes/feature').include('**/*.feature')
+    def features = fileTree('src/tests/cukes/features').include('**/*.feature')
 
     def count = 0
     def tags =  "\"~@pending\""
@@ -87,6 +87,7 @@ compileJava.dependsOn functionalTestCreator
 compileTestJava.dependsOn functionalTestCreator
 
 task generateFunctionalTestReport << {
+    def reports = ''
     def tests = fileTree('src/tests/cukes/runners/template').include('*.java')
     tests.each { test ->
         def test_name = test.name.split("\\.").first()

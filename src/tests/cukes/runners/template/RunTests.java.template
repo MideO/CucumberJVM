@@ -4,6 +4,6 @@ import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@cucumber.api.CucumberOptions(format={"cucumber.cukes.stepdefinitions.support.http.HttpConversationHTMLFormatter:reports/runners/${testRunnerClassName}", "pretty", "json:reports/json/${testRunnerClassName}.json"}, glue = {"cucumber/cukes.stepdefinitions"}, features = {"${featureFilePath}"}, strict = true, tags = {${tags}})
+@cucumber.api.CucumberOptions(format={"cukes.stepdefinitions/runners/${testRunnerClassName}", "pretty", "json:reports/json/${testRunnerClassName}.json"}, glue = {"cukes.stepdefinitions"}, features = {"${featureFilePath}"}, strict = true, tags = {${tags}})
 public class ${testRunnerClassName} {
 }
