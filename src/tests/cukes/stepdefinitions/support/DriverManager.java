@@ -23,7 +23,7 @@ public class DriverManager {
 
     public DriverManager() {
         config = TestConfig.getInstance();
-        
+
     }
 
     private Map<String, String> getBrowserCapabilities(){
@@ -34,15 +34,14 @@ public class DriverManager {
         return new URL(config.testProperties.getProperty("selenium.grid.url"));
     }
 
-    public RemoteWebDriver getWebriver() throws MalformedURLException {
+    public RemoteWebDriver getWebDriver() throws MalformedURLException {
         DesiredCapabilities capability = new DesiredCapabilities(getBrowserCapabilities());
-
         driver = new RemoteWebDriver(getGridURL(), capability);
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         return driver;
     }
 
-    public void closeWebriver(){driver.quit();}
+    public void closeWebDriver(){driver.quit();}
 
     public void takeScreenShot(String screenShotPath){
         File scrFile = driver.getScreenshotAs(OutputType.FILE);
