@@ -32,7 +32,7 @@ public class TestConfig {
     }
 
     public Map<String, String> loadTestBrowserCapabilities(){
-        String pathTemplate = testProperties.getProperty("user.agent.capabilies.path");
+        String pathTemplate = testProperties.getProperty("user.agent.capabilities.path");
         String browserName = testProperties.getProperty("user.agent");
         String browserPropertiesPath = pathTemplate.replace("{browser}", browserName);
 

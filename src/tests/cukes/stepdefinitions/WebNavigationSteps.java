@@ -13,8 +13,8 @@ public class WebNavigationSteps {
     @Inject
     public WebNavigationSteps(State state){
         this.state = state;
-
     }
+
     @Given("^I navigate \"([^\"]*)\"$")
     public void I_navigate(String pageURL) throws Throwable {
         state.currentPage = new PageObject(state.driver);
