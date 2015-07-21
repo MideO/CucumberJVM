@@ -17,7 +17,6 @@ idea {
         jdkName = '1.7'
     }
 }
-//
 sourceSets {
     main {
         java {
@@ -31,7 +30,7 @@ configurations {
 }
 
 
-ext.seleniumVersion = '2.41.0'
+ext.seleniumVersion = '2.46.0'
 
 
 dependencies {
