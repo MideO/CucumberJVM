@@ -20,7 +20,7 @@ idea {
 sourceSets {
     main {
         java {
-            srcDirs =  ['src/tests', 'src/test/cukes', 'src/test/cukes/features']
+            srcDirs =  ['src/tests']
         }
     }
 }
