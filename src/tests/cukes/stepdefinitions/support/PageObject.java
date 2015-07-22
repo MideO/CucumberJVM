@@ -17,7 +17,7 @@ public class PageObject {
     }
 
     public void clickElementWithText(String text) {
-        this.driver.findElement(By.name(text)).click();
+        this.driver.findElement(By.partialLinkText(text)).click();
     }
 
     public void clickFirstElementWithText(String text) {
