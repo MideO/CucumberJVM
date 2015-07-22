@@ -29,5 +29,6 @@ public class WebNavigationSteps {
     @When("^I search for \"([^\"]*)\"$")
     public void I_search_for(String searchString) throws Throwable {
         state.currentPage.typeIntoTextFieldWithLabel("q", searchString);
+        state.currentPage.submitRequest("q");
     }
 }

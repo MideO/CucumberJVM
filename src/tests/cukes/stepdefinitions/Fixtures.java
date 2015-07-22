@@ -24,7 +24,6 @@ public class Fixtures {
 
     @After
     public void tearDown(Scenario scenario){
-
         if (scenario.isFailed()) {
             state.driverManager.takeScreenShot("./results/screenShots/"+scenario.toString() + ".png");
         }

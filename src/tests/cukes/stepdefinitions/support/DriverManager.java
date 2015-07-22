@@ -1,6 +1,5 @@
 package cukes.stepdefinitions.support;
 
-import cukes.stepdefinitions.State;
 import cukes.stepdefinitions.config.TestConfig;
 
 import org.apache.commons.io.FileUtils;
@@ -36,8 +35,9 @@ public class DriverManager {
 
     public RemoteWebDriver getWebDriver() throws MalformedURLException {
         DesiredCapabilities capability = new DesiredCapabilities(getBrowserCapabilities());
+
         driver = new RemoteWebDriver(getGridURL(), capability);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         return driver;
     }
 

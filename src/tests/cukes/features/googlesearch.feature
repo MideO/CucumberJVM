@@ -7,6 +7,6 @@ Feature: Navigation to cucumber-jvm homepage
     Then I am redirected to the "cucumber-jvm" github page
     Examples:
       | search page url |
-      | google.com      |
-      | bing.com        |
+      | http://www.google.com      |
+      | http://www.bing.com        |
 
