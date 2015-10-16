@@ -4,7 +4,7 @@ Feature: Navigation to cucumber-jvm homepage
     Given I navigate "<search page url>"
     When I search for "cucumber-jvm"
     And  I click on the first link containing "cucumber-jvm"
-    Then I am redirected to the "cucumber-jvm" github page
+    Then I should be redirected to the "cucumber-jvm" github page
     Examples:
       | search page url |
       | http://www.google.com      |
