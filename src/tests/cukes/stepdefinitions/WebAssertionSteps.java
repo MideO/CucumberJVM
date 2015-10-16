@@ -15,7 +15,7 @@ public class WebAssertionSteps {
         this.state = state;
     }
 
-    @Then("^I am redirected to the \"([^\"]*)\" github page$")
+    @Then("^I should be redirected to the \"([^\"]*)\" github page$")
     public void I_am_redirected_to_the_github_page(String text) throws Throwable {
         assertTrue(state.currentPage.titleIs(text));
         Assert.assertTrue(state.currentPage.containsText(text));
